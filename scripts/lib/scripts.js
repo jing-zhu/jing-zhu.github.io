@@ -13,10 +13,16 @@ var callback = function(){
     }, 2000);
 	});
 };
-$(document).ready(callback);
+// $(document).ready(callback);
 
 var resize;
 window.onresize = function() {
+	clearTimeout(resize);
+	resize = setTimeout(function(){
+		callback();
+	}, 100);
+};
+window.onload = function() {
 	clearTimeout(resize);
 	resize = setTimeout(function(){
 		callback();
