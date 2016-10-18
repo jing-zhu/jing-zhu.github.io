@@ -13,7 +13,7 @@ var callback = function(){
     }, 2000);
 	});
 };
-// $(document).ready(callback);
+$(document).ready(callback);
 
 var resize;
 window.onresize = function() {
